@@ -1,6 +1,13 @@
 <h1> All Landmarks </h1>
-<ul>
-<%@landmarks.each do |landmark| %>
-<li><%=landmark.name%> <%=landmark.year_completed%></li>
-<%end%>
-</ul>
+<table>
+<tr>
+<th>Name</th>
+<th>Year Completed</th>
+</tr>
+<tr>
+  <%@landmarks.each do |landmark| %>
+  <td><%=landmark.name%></td>
+  <td><%=landmark.year_completed%></td>
+  <%end%>
+</tr>
+</table>

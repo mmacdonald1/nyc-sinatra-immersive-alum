@@ -19,5 +19,10 @@ class LandmarksController < ApplicationController
     @landmark = Landmark.find(id)
     erb :'/landmarks/show'
   end
+  get "/landmarks/:id/edit" do
+    id = params[:id]
+    @landmark = Landmark.find(id)
+    erb :'/landmarks/edit'
+  end
 
 end

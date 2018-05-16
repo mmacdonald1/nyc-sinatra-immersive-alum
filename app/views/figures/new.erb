@@ -1,0 +1,9 @@
+<h1>Landmarks</h1>
+<% @landmarks.each do |landmark|%>
+  <input type="checkbox" name="landmark[name]" value="<%=landmark.id%>"><%=landmark.name%></input>
+<%end%>
+
+<h1>Titles</h1>
+<% @titles.each do |title|%>
+  <input type="checkbox" name="title[name]" value="<%=title.id%>"><%=title.name%></input>
+<%end%>

@@ -1,10 +1,6 @@
-<form method="POST" action="/landmarks">
-<h1>Enter a new landmark</h1>
-<input type="text" name="landmark" placeholder="landmark name"></input>
-<input type="submit" value="Create New Landmark"></input>
-</form>
-
-<h1> Existing Landmarks </h1>
+<h1> All Landmarks </h1>
+<ul>
 <%@landmarks.each do |landmark| %>
-<input type="checkbox"><%=landmark.name%></input>
+<li><%=landmark.name%> <%=landmark.year_completed%></li>
 <%end%>
+</ul>

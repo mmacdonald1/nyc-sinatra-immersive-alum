@@ -2,7 +2,11 @@
 <form method="POST" action="/landmarks/<%= @landmark.id %>">
 <h1>Edit landmark</h1>
 <input type="hidden" name="_method" value="patch">
-<input type="text" placeholder="landmark name" name="name" value="<%= @landmark.name %>"></input>
-<input type="text" placeholder="landmark year completed" name="year_completed" value="<%= @landmark.year_completed %>"></input>
+<input type="text" placeholder="landmark name" name="landmark[name]" value="<%= @landmark.name %>"></input>
+<input type="text" placeholder="landmark year completed" name="landmark[year_completed]" value="<%= @landmark.year_completed %>"></input>
 <input type="submit" value="Update Landmark"></input>
+</form>
+<form method="POST" action="/landmarks/<%= @landmark.id %>">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete This Landmark">
 </form>
